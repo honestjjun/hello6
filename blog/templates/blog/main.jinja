@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>AWS 에 RDS를 PostgreSQL 로 변경해보자.</h1>
+    {% for post in posts %}
+        <h4>{{ post.title }}</h4>
+        <p style="font-size:13px;">{{ post.created_at|date:'y-m-d H:s' }}</p>
+        <img src="{{ post.image.url }}">
+    {% empty %}
+        <h4>post 가 존재 하지 않습니다.</h4>
+    {% endfor %}
+</body>
+</html>
